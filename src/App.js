@@ -1,11 +1,11 @@
+import Counter from './components/Counter';
 import Header from './components/Header';
-import Products from './components/Products';
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
-      <Products />
+      <Counter />
     </div>
   );
 }
