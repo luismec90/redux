@@ -1,6 +1,11 @@
 import * as ActionTypes from '../action-types';
 
-export const notification = (payload) => ({
-  type: ActionTypes.SHOW_NOTIFICATION,
+export const increaseCounter = (payload) => ({
+  type: ActionTypes.INCREASE_COUNTER,
+  payload,
+});
+
+export const decreaseCounter = (payload) => ({
+  type: ActionTypes.DECREASE_COUNTER,
   payload,
 });

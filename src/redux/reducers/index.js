@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import Notification from './Notification';
+import Counter from './Counter';
 
 const RootReducer = combineReducers({
-  Notification,
+  Counter,
 });
 
 export default RootReducer;

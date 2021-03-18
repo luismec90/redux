@@ -1,22 +1,20 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { notification } from '../redux/actions';
+import { decreaseCounter, increaseCounter } from '../redux/actions';
 
 function Products() {
   const dispatch = useDispatch();
-  const message = useSelector((state) => state.Notification.message);
+  const counterValue = useSelector((state) => state.Counter.value);
 
   return (
     <div>
-      Products
       <div>
-        <h1>{message}</h1>
-        <button
-          onClick={() =>
-            dispatch(notification({ message: 'Hola mundo', type: 'success' }))
-          }
-        >
+        <h1>{counterValue}</h1>
+        <button onClick={() => dispatch(increaseCounter())}>
           Increase counter
+        </button>
+        <button onClick={() => dispatch(decreaseCounter())}>
+          Decrease counter
         </button>
       </div>
     </div>
