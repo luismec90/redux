@@ -6,6 +6,11 @@ const initialState = {
 
 const counter = (state = initialState, action) => {
   switch (action.type) {
+    case ActionTypes.LOAD_COUNTER:
+      return {
+        ...state,
+        value: parseInt(localStorage.getItem('counter') ?? 0),
+      };
     case ActionTypes.INCREASE_COUNTER:
       return {
         ...state,

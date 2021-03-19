@@ -9,15 +9,15 @@ function Counter() {
     <div className="text-center mt-4">
       <button
         className="btn btn-primary"
-        onClick={() => dispatch(increaseCounter())}
+        onClick={() => dispatch(increaseCounter(2))}
       >
-        Increase counter
+        Increase counter by 2
       </button>
       <button
         className="btn btn-primary ml-3"
-        onClick={() => dispatch(decreaseCounter())}
+        onClick={() => dispatch(decreaseCounter(2))}
       >
-        Decrease counter
+        Decrease counter by 2
       </button>
     </div>
   );
